@@ -123,6 +123,12 @@ h3 { font-size: var(--fs-h3); }
     margin-bottom: 1em;
 }
 
+.section_subtitle_work{
+    color: var(--crl-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
 /* Header */
 
 nav { 
@@ -259,4 +265,37 @@ nav {
         position:relative;
         z-index: 2;
     }
+}
+
+.my-work{
+    background-color: var(--clr-dark);
+    color: var(--crl-light);
+    text-align: center;
+}
+
+.portfolio{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.portfolio_item{
+    background: var(--crl-accent);
+    overflow: hidden;
+}
+
+.portfolio_img{
+    transition: 
+        transfom 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio_item:focus{
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio_img:hover,
+.portfolio_item:focus .portfolio_img{
+    transform: scale(1.2);
+    opacity: .5;
 }
